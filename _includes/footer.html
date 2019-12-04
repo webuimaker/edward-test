@@ -1,0 +1,190 @@
+<div id='footer'>
+  <div class='three spacing'></div>
+  <div class='row'>
+    <div class='large-3 medium-3 columns'>
+      <h1>
+        <a href='index.html'>
+          <img alt="" src="{{site.url}}/images/logo-footer.png" />
+        </a>
+      </h1>
+      <p>©2019 Cleanily. All rights reserved.</p>
+      <div class='spacing'></div>
+      <div class='spacing'></div>
+    </div>
+    <div class='large-3 medium-3 columns'>
+      <div class='spacing'></div>
+      <div class='links'>
+        <h4>LEGAL STUFF</h4>
+        <ul>
+          <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class='spacing'></div>
+    </div>
+    <div class='large-3 medium-3 columns'>
+      <div class='spacing'></div>
+      <div class='links'>
+        <h4>NAVIGATE</h4>
+        <ul>
+          {% for navlist in site.data.nav.items %}
+            <li><a href="{{navlist.url}}">{{navlist.name}}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class='spacing'></div>
+    </div>
+    <div class='large-3 medium-3 columns'>
+      <div class='spacing'></div>
+      <h4>Contact us</h4>
+      <ul>
+        <li>Phone: 0808 281 2728</li>
+        <!--<li>Emial: info@cleanily.com</li>-->
+        <li>Floor 11 Cale Cross House 156 Pilgrim Street Newcastle Upon Tyne NE1 6SU</li>
+      </ul>
+      <div class='spacing'></div>
+      <ul class='socials'>
+        <li>
+          <a href="https://www.facebook.com/Cleanily">
+            <i class='fa fa-facebook'></i>
+          </a>
+        </li>
+		<!--
+        <li>
+          <a href='http://twitter.com'>
+            <i class='fa fa-twitter'></i>
+          </a>
+        </li>
+        <li>
+          <a href='http://dribbble.com'>
+            <i class='fa fa-dribbble'></i>
+          </a>
+        </li>
+        <li>
+          <a href='http://tumblr.com'>
+            <i class='fa fa-tumblr'></i>
+          </a>
+        </li>
+		-->
+      </ul>
+      <div class='spacing'></div>
+    </div>
+  </div>
+  <div class='two spacing'></div>
+</div>
+
+ <script src="{{ "/javascripts/libs.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+  <script>
+    // terrificjs bootstrap
+    (function($) {
+        $(document).ready(function() {
+            var $page = $('body');
+            var config = {
+              dependencyPath: {
+                plugin: 'javascripts/'
+              }
+            }
+            var application = new Tc.Application($page, config);
+            application.registerModules();
+            application.start();
+        });
+    })(Tc.$);
+  </script>
+  <script src="{{ "/javascripts/masonry.pkgd.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+  <script src="{{ "/javascripts/imagesloaded.pkgd.min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+  <script src="{{ "/javascripts/slick.min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+  <script src="{{ "/javascripts/json2.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+<script src="{{ "/javascripts/jquery.countTo.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+<script src="{{ "/javascripts/jquery.appear.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+<script src="{{ "/javascripts/jquery.validate.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+<script src="{{ "/javascripts/jquery.sequence-min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+<script src="{{ "/javascripts/jquery.easing.1.3.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+<script src="{{ "/javascripts/app.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+
+<!-- not style in theme  -->
+
+<script src="{{ "/javascripts/lazysizes.min.js" | prepend: site.baseurl }}" type="text/javascript" async ></script>
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KDQSBP6"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-86787545-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-86787545-3');
+</script>
+
+<script>var queryForm=function(e){var t=!(!e||!e.reset)&&e.reset,n=window.location.toString().split("?");if(n.length>1){var r=n[1].split("&");for(i in r){var o=r[i].split("=");(t||null===sessionStorage.getItem(o[0]))&&sessionStorage.setItem(o[0],o[1])}}for(var s=document.querySelectorAll("input[type=hidden]"),i=0;i<s.length;i++){var a=sessionStorage.getItem(s[i].name);a&&(document.getElementById(s[i].name).value=a)}};queryForm();</script>
+
+<script type=”text/javascript”>
+function setCookie(name, value, days){
+var date = new Date();
+date.setTime(date.getTime() + (days*24*60*60*1000));
+var expires = “; expires=” + date.toGMTString();
+document.cookie = name + “=” + value + expires + “;path=/”;
+}
+function getParam(p){
+var match = RegExp(‘[?&]’ + p + ‘=([^&]*)’).exec(window.location.search);
+return match && decodeURIComponent(match[1].replace(/\+/g, ‘ ‘));
+}
+var gclid = getParam(‘gclid’);
+if(gclid){
+var gclsrc = getParam(‘gclsrc’);
+if(!gclsrc || gclsrc.indexOf(‘aw’) !== -1){
+setCookie(‘gclid’, gclid, 90);
+}
+}
+</script>
+
+<script>
+  function readCookie(name) {
+    var n = name + “=”;
+    var cookie = document.cookie.split(‘;’);
+    for(var i=0;i < cookie.length;i++) {
+      var c = cookie[i];
+      while (c.charAt(0)==’ ‘){c = c.substring(1,c.length);}
+      if (c.indexOf(n) == 0){return c.substring(n.length,c.length);}
+    }
+    return null;
+  }
+
+  window.onload = function() {
+    document.getElementById(‘gclid’).value =
+            readCookie(‘gclid’);
+  }
+</script>
+
+<script>
+function fGetUrlParameter(sParam) {
+var sPageURL = window.location.search.substring(1);
+var sURLVariables = sPageURL.split('&');
+for (var i = 0; i < sURLVariables.length; i++) {
+var sParameterName = sURLVariables[i].split('=');
+if (sParameterName[0] == 'key') {
+var dec =  decodeURIComponent(sParameterName[1]);
+return dec.replace(/-/g, " ")
+}
+}
+};
+
+var stringHeader = fGetUrlParameter('key')
+
+var element = document.getElementById('keywords');
+if (stringHeader != undefined) {
+
+element.style.marginTop = "80px";
+element.style.whiteSpace = "pre-wrap"
+element.innerHTML = stringHeader;
+}else{
+$('#keywords').show();
+}
+
+</script>

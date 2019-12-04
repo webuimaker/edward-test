@@ -1,0 +1,39 @@
+<div class='full' style="background: #f5f5f5">
+    <div class='row'>
+		<div class='large-12 columns'>
+			<div class="mod modSectionHeader">
+			  <div class="special-title centered-text">
+				<h2>{{page.gallery.sectionTitle}}</h2>
+			  </div>
+			  {% if page.gallery.tagline %}
+				<h3 class='centered-text' >{{page.gallery.tagline}} </h3>
+			  {% endif %}
+			</div>
+		
+		  <div class='spacing'></div>
+		  {% if page.gallery.body %}
+				 <p>
+				{{page.gallery.body | markdownify }}
+			  </p>
+		 {% endif %}
+		 
+		  <div class=' spacing'></div>
+		</div>
+  </div>
+  <div class='row'>
+    <div class='large-12 columns'>
+      <div class='mod modBoxedSlider'>
+        <div class='slides'>
+		{% for gallerys in page.gallery.items %}
+          <div class='slide'>
+            <img alt="{{gallerys.name}}" src="{{gallerys.image}}" />
+          </div>
+		{% endfor %}
+		
+		
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='spacing'></div>
+</div>

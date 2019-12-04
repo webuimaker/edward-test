@@ -1,0 +1,39 @@
+<div class='full'  style="background: ;">
+  <div class='row'>
+    <div class='large-12 columns'>
+		<div class="mod modSectionHeader">
+		  <div class="special-title centered-text">
+			<h2>{{page.localBusiness.sectionTitle}}</h2>
+		  </div>
+		  {% if page.localBusiness.tagline %}
+			<h3 class='centered-text' >{{page.localBusiness.tagline}} </h3>
+		  {% endif %}
+		</div>
+	
+      <div class='spacing'></div>
+	  {% if page.localBusiness.body %}
+			 <p>
+			{{page.localBusiness.body | markdownify}}
+		  </p>
+	 {% endif %}
+     
+      <div class=' spacing'></div>
+    </div>
+  </div>
+  {% for businesses in page.localBusiness.business %}
+  <div class='row'>
+	<div class='medium-6 columns'>		
+		<img src="{{ businesses.logo }}" alt="{{ businesses.name }}">
+	</div>
+	<div class='medium-6 columns'>
+		<h3>{{ businesses.businessName }}</h3>
+		{{ businesses.body  | markdownify }}
+	</div>
+	
+  </div>
+  <div class=' two spacing'></div>
+  {% endfor %}
+  
+  
+  <div class='spacing'></div>
+</div>

@@ -1,0 +1,12 @@
+<ul class="accordion" id="myAccordion" data-accordion>
+{% for faqs in  site.data.faq.faqList %}
+
+  <li class="accordion-navigation">
+	<a href="#{{.faqs.question | replace: ' ', '-'  | replace: '?', '' }}">{{.faqs.question }}</a>
+		<div id="{{.faqs.question | replace: ' ', '-' | replace: '?', '' }}" class="content">
+			{{ .faqs.answer }}
+		</div>
+  </li>
+  {% endfor %}
+</ul>
+

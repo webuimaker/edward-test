@@ -1,0 +1,153 @@
+---
+layout: default
+---
+{% if page.slides.enable == true %}
+
+<div class='mod modDefaultSlider top-banner'>
+  <div class='sequence' data-autostop='on' data-timeout='0'>
+    <!--<a class='sequence-prev' href='javascript:void(0);'>
+      <span></span>
+    </a>
+    <a class='sequence-next' href='javascript:void(0);'>
+      <span></span>
+    </a>-->
+    <!--<ul class='sequence-pagination'>
+      {% for slide in page.slides %}
+        {% if forloop.first %}
+          {% assign class = 'current' %}
+        {% else %}
+          {% assign class = '' %}
+        {% endif %}
+        <li class="{{class}}"></li>
+      {% endfor %}
+    </ul>-->
+	
+	  
+		
+    <ul class='sequence-canvas'>
+      {% for slide in page.slides.banner %}
+        {% if forloop.first %}
+          {% assign style = 'static' %}
+        {% else %}
+          {% assign style = '' %}
+        {% endif %}
+
+        <li class='frame {{style}}'>
+          <div id="banner" class='bg' style='background-image:url({{slide.bgUrl}});'></div>
+		  <div class="bg-overlay"></div>
+          <div class="row">
+			  <div class="medium-8 large-8 columns">					
+					  <div class='title '>
+						<div class='row'>
+						  <div class='large-12 columns'>
+							<h1 id="keywords">{{ slide.title }}</h1>
+						  </div>
+						</div>
+					  </div>
+					  <div class='lists buttons-wrapper'>
+						<div class='row'>
+						  <div class='large-12 columns'>
+							<ul>
+							{% for button in slide.lists %}
+							  <li>{{ button.text }}</a></li>
+							{% endfor %}
+							</ul>
+						  </div>
+						</div>
+					  </div>
+				</div>
+			  <div class="medium-4 large-4 columns">
+				<div class="top-form info">
+					 <form  data-netlify-recaptcha="true"  id="location_page" name="{{page.location | replace: ' ', '-' | downcase }}"  method="POST" data-netlify="true" action="/thanks">
+					 <!--<p class="hidden">
+						<label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+					  </p>
+					  -->
+										  <div class=''>
+						<h2>{{page.slides.forms.heading}}</h2>
+						<p>{{page.slides.forms.subHeading}}</p>
+
+
+						<input type="hidden" name="client_id" id="Client_id" value="">
+						<input type="hidden" name="gclid" id="gclid" value="">
+						<input type="hidden" name="utm_source" id="utm_source" value="">
+						<input type="hidden" name="utm_content" id="utm_content" value="">
+						<input type="hidden" name="utm_medium" id="utm_medium" value="">
+						<input type="hidden" name="utm_campaign" id="utm_campaign" value="">
+						<input type="hidden" name="utm_term" id="utm_term" value="">
+						<input type="hidden" name="location" id="location" value="{{page.location | replace: ' ', '-' | downcase }}">
+						<input value="{{page.slides.forms.franchise | replace: ' ', '-' | downcase }}" type="hidden" name="franchise_name" id="franchise_name">						
+						<input placeholder="Name" type="text" name="Name" required>
+						<input placeholder="Email" type="email" name="email" required>
+						<input placeholder="Phone number" type="tel" name="phone_number" required>
+						<textarea placeholder="Message" name="message" rows="2"></textarea>
+						
+						
+
+
+
+
+
+
+
+						<!--
+						
+						{% for forms in page.slides.forms.formList %}
+							{% if forms.input != true %}
+									<textarea  name='{{forms.name}}' rows="2" placeholder='{{forms.placeholder}}' required="{{forms.required}}" ></textarea>
+							{% else %}
+								<input name='{{forms.name}}' placeholder='{{forms.placeholder}}' required="{{forms.required}}" type="{{forms.type}}" >
+							{% endif %}
+							  
+						{% endfor %}
+						-->
+						
+						
+						 <div data-netlify-recaptcha="true"></div>
+						<input class='button white' type='submit'>
+					  </div>
+					</form>
+				</div>
+				<p class="call">
+					<i class="fa fa-phone"> </i> {{page.slides.contactNumber}}
+				</p>
+				
+			  </div>
+		</div>
+	
+	
+		  
+		  
+		  
+		  
+		  
+		  
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endif %}
+
+{% if page.reviews.enable == true %}
+	{% include reviews.html %}
+{% endif %}
+
+
+{% if page.howitsWorks.enable == true %}
+	{% include howitswork.html %}
+{% endif %}
+{% if page.ourServices.enable == true %}
+	{% include our-services.html %}
+{% endif %}
+{% if page.localBusiness.enable == true %}
+	{% include local-business.html %}
+{% endif %}
+
+{% if page.gallery.enable == true %}
+	{% include gallery-location.html %}
+{% endif %}
+
+
+
+

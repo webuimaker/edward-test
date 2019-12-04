@@ -1,0 +1,25 @@
+items:
+  - name: Home
+    path: index.html
+    section_id: home
+  - name: About
+    path: about.html
+    section_id: about
+  - name: Locations
+    path: find-your-location
+    section_id: locations
+  - name: Pricing
+    path: pricing
+    section_id: Pricing
+  - name: FAQs
+    path: faq
+    section_id: faq
+  - name: Contact
+    path: contact.html
+    section_id: contact
+  - name: Blog
+    path: blog/
+    section_id: blog
+  - name: Login
+    path: /login
+    section_id: Login
